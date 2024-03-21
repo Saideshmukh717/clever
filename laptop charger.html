@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CLEVER</title>
+    <link rel="stylesheet" href="styles1.css">
+    <!-- Link to Font Awesome CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    
+    <style>
+        body {
+            background-image: url('phone charger/_04ec3e13-1ac3-4879-8918-1687df0c703b.jpeg');
+            background-size: cover; /* Adjust as needed */
+            background-position: center; /* Adjust as needed */
+        }
+    </style>
+    <style>
+        /* Define hover effect */
+        .hover-effect:hover {
+          text-shadow: 
+            0 0 10px rgba(255, 94, 0, 0.5), /* Orange shadow */
+            0 0 20px rgba(255, 46, 113, 0.5), /* Pink shadow */
+            0 0 30px rgba(82, 46, 209, 0.5); /* Purple shadow */
+        }
+      </style>
+</head>
+
+<body>
+    
+    <header>
+        <div class="header-left">
+            <style>
+                /* CSS to apply rounded corners to the logo */
+                .logo {
+                    border-radius: 20px; /* Adjust the value to change the roundness */
+                }
+            </style>
+            <a href="home.html">
+                <img src="logo/Untitled design.png" alt="CLEVER" class="logo" style="max-width: 90px;">
+                
+            </a>
+            <h1>CLEVER</h1>
+        </div>
+
+        <nav>
+            <ul>
+                <li><a href="home.html">home<i class="fas fa-home"></i></a></li>
+                <li><a href="clever.html">Products <i class="fas fa-box-open"></i></a></li>
+                <li><a href="contact.html">Contact <i class="fas fa-envelope"></i></a></li>
+                <li><a href="#" id="cart">Cart (<i class="fas fa-shopping-cart"></i> 0)</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="welcome" style="display: flex; align-items: center;">
+            
+            <div class="text-content" style="flex: 1;">
+                <h2 style="font-size: 100px; color: rgb(255, 255, 255);">
+                    <span class="hover-effect">Laptop</span> 
+                    <span class="hover-effect">charger</span> 
+                </h2>
+                <div>
+                <button class="add-to-cart" data-name="Laptop charger" data-price="30" >Add to Cart</button>
+                </div>    
+            </div>
+            <button id="prevButton" class="slideshow-button" aria-label="Previous"><i class="fas fa-chevron-left"></i></button>
+            <div class="image-slider" style="max-width: 700px; flex: 1;">
+                
+                <div class="slides-container">
+                    <img src="phone charger/_04ec3e13-1ac3-4879-8918-1687df0c703b.jpeg" alt="Slide 1">
+                    <img src="phone charger/_61829ce8-7404-4075-ae96-d4fd760c2558.jpeg" alt="Slide 2">
+                    <img src="phone charger/_94d5a9ca-48f5-48b0-81e5-0c1409b4b0cd.jpeg" alt="Slide 3">
+                    <img src="phone charger/_9f535a35-c6f6-463b-a388-dafd4b0eee2e.jpeg" alt="Slide 4">
+                    
+                    <!-- Add more images as needed -->
+                </div>
+                
+                
+            </div>
+            <button id="nextButton" class="slideshow-button" aria-label="Next"><i class="fas fa-chevron-right"></i></button>
+        </section>
+        
+
+        <section id="intro" >
+            <div>
+                <h1>Efficiency Redefined: Clever Laptop Chargers</h1>
+                <p>Prepare to revolutionize your charging experience with Clever's advanced laptop chargers – the ultimate fusion of power, versatility, and reliability that keeps you connected and productive wherever life takes you. 🔌</p>
+                <p>Experience unparalleled efficiency with Clever's laptop chargers, meticulously engineered to deliver fast and reliable charging for your devices. Designed with cutting-edge technology and precision craftsmanship, our chargers ensure optimal performance and compatibility with a wide range of laptops, so you never have to compromise on power when you need it most. ⚡</p>
+                <p>But Clever's laptop chargers are more than just functional accessories – they're essential tools for the modern professional. With features like compact, lightweight designs and durable construction, our chargers are built to withstand the rigors of daily use while providing maximum portability and convenience. Whether you're in the office, on the road, or working from home, Clever's chargers are the reliable companion you can count on to keep your devices powered up and ready to go. 💼</p>
+                <p>Experience the future of charging with Clever's intelligent chargers, equipped with advanced safety features such as overcurrent protection, overvoltage protection, and short circuit protection to ensure the safety of your devices at all times. With Clever, you can charge with confidence, knowing that your devices are in good hands. 🔒</p>
+                <p>Step into a world where efficiency meets reliability, where innovation meets performance, and where every charge is a seamless experience. Join the ranks of those who demand nothing but the best, and elevate your charging game with Clever's laptop chargers – where efficiency is redefined. 🌟</p>
+                <p>Efficiency redefined. Choose Clever.</p>
+            </div>            
+        </section>
+        <section id="reviews">
+            <h2>Customer Reviews</h2>
+            <div id="review-form">
+                <h3>Write a Review</h3>
+                <form id="reviewForm">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
+                    <label for="rating">Rating:</label>
+                    <input type="number" id="rating" name="rating" min="1" max="5" required>
+                    <label for="comment">Comment:</label>
+                    <textarea id="comment" name="comment" rows="4" required></textarea>
+                    <button type="submit">Submit Review</button>
+                </form>
+            </div>
+        </section>
+        
+    </main>
+
+    
+
+    <!-- Include the cart modal -->
+    <div id="cartModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Your Cart</h2>
+            <div id="cart-items">
+                <!-- Cart items will be displayed here -->
+            </div>
+            <button id="checkout">Checkout</button>
+        </div>
+    </div>
+
+    <!-- Include JavaScript files at the end of the body -->
+    <script src="cart.js" defer></script>
+    <script src="product1.js"></script>
+    <script src="review.js"></script>
+    <section>
+
+        <p style="text-align: center;">&copy; 2024 CLEVER Store. All rights reserved.</p>
+
+        
+    </section>
+    
+    
+</body>
+
+</html>

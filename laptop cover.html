@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CLEVER</title>
+    <link rel="stylesheet" href="styles1.css">
+    <!-- Link to Font Awesome CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    
+    <style>
+        body {
+            background-image: url('laptop cover/_1bc5903c-a73b-4274-b955-9a6311a50c67.jpeg');
+            background-size: cover; /* Adjust as needed */
+            background-position: center; /* Adjust as needed */
+        }
+    </style>
+    <style>
+        /* Define hover effect */
+        .hover-effect:hover {
+          text-shadow: 
+            0 0 10px rgba(255, 94, 0, 0.5), /* Orange shadow */
+            0 0 20px rgba(255, 46, 113, 0.5), /* Pink shadow */
+            0 0 30px rgba(82, 46, 209, 0.5); /* Purple shadow */
+        }
+      </style>
+</head>
+
+<body>
+    
+    <header>
+        <div class="header-left">
+            <style>
+                /* CSS to apply rounded corners to the logo */
+                .logo {
+                    border-radius: 20px; /* Adjust the value to change the roundness */
+                }
+            </style>
+            <a href="home.html">
+                <img src="logo/Untitled design.png" alt="CLEVER" class="logo" style="max-width: 90px;">
+                
+            </a>
+            <h1>CLEVER</h1>
+        </div>
+
+        <nav>
+            <ul>
+                <li><a href="home.html">home<i class="fas fa-home"></i></a></li>
+                <li><a href="clever.html">Products <i class="fas fa-box-open"></i></a></li>
+                <li><a href="contact.html">Contact <i class="fas fa-envelope"></i></a></li>
+                <li><a href="#" id="cart">Cart (<i class="fas fa-shopping-cart"></i> 0)</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="welcome" style="display: flex; align-items: center;">
+            
+            <div class="text-content" style="flex: 1;">
+                <h2 style="font-size: 100px; color: rgb(255, 255, 255);">
+                    <span class="hover-effect">Laptop</span> 
+                    <span class="hover-effect">cover</span> 
+                </h2>
+                <div>
+                <button class="add-to-cart" data-name="Laptop cover" data-price="30" >Add to Cart</button>
+                </div>    
+            </div>
+            <button id="prevButton" class="slideshow-button" aria-label="Previous"><i class="fas fa-chevron-left"></i></button>
+            <div class="image-slider" style="max-width: 700px; flex: 1;">
+                
+                <div class="slides-container">
+                    <img src="laptop cover/_1bc5903c-a73b-4274-b955-9a6311a50c67.jpeg" alt="Slide 1">
+                    <img src="laptop cover/_3e17624b-80a0-45bd-8528-66f8a4436460.jpeg" alt="Slide 2">
+                    <img src="laptop cover/_b09c513f-3faf-432d-8b84-69a730037f1b.jpeg" alt="Slide 3">
+                    <img src="laptop cover/_de066dd9-6d6f-4bf0-8457-f9fac8edca70.jpeg" alt="Slide 4">
+                    
+                    <!-- Add more images as needed -->
+                </div>
+                
+                
+            </div>
+            <button id="nextButton" class="slideshow-button" aria-label="Next"><i class="fas fa-chevron-right"></i></button>
+        </section>
+        
+
+        <section id="intro" >
+            <div>
+                <h1>Elevate Your Laptop: Clever Laptop Covers</h1>
+                <p>Transform your device into a masterpiece of style and protection with Clever's innovative laptop covers – where elegance, durability, and functionality converge to redefine the way you safeguard your valuable tech companion. 💻</p>
+                <p>Prepare to be captivated by the sleek sophistication of Clever's laptop covers, meticulously crafted from premium materials such as genuine leather, rugged nylon, and durable polycarbonate. Each cover is designed to envelop your laptop in a cocoon of luxury while providing superior protection against scratches, spills, and everyday wear and tear. 🛡️</p>
+                <p>But Clever's laptop covers are more than just protective shells – they're expressions of your personal style and individuality. Choose from a range of chic designs, from timeless classics to bold statement pieces, and make a statement wherever you go. With precise cutouts for ports and vents, our covers ensure easy access to all essential functions while maintaining a slim profile that complements your device's sleek aesthetics. ✨</p>
+                <p>Experience the ultimate peace of mind knowing that your laptop is shielded by Clever's advanced technology and uncompromising craftsmanship. Whether you're a busy professional, a creative visionary, or a student on the go, our covers are designed to keep up with your demanding lifestyle, providing unmatched protection and style every step of the way. 🌟</p>
+                <p>Step into a world where sophistication meets functionality, where protection meets style, and where every detail is meticulously crafted to perfection. Join the ranks of those who demand nothing but the best, and elevate your laptop experience with Clever's laptop covers – where excellence knows no bounds. 🔝</p>
+                <p>Elevate your laptop. Choose Clever.</p>
+            </div>   
+        </section>
+        <section id="reviews">
+            <h2>Customer Reviews</h2>
+            <div id="review-form">
+                <h3>Write a Review</h3>
+                <form id="reviewForm">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
+                    <label for="rating">Rating:</label>
+                    <input type="number" id="rating" name="rating" min="1" max="5" required>
+                    <label for="comment">Comment:</label>
+                    <textarea id="comment" name="comment" rows="4" required></textarea>
+                    <button type="submit">Submit Review</button>
+                </form>
+            </div>
+        </section>
+        
+    </main>
+
+    
+
+    <!-- Include the cart modal -->
+    <div id="cartModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Your Cart</h2>
+            <div id="cart-items">
+                <!-- Cart items will be displayed here -->
+            </div>
+            <button id="checkout">Checkout</button>
+        </div>
+    </div>
+
+    <!-- Include JavaScript files at the end of the body -->
+    <script src="cart.js" defer></script>
+    <script src="product1.js"></script>
+    <script src="review.js"></script>
+    <section>
+
+        <p style="text-align: center;">&copy; 2024 CLEVER Store. All rights reserved.</p>
+
+        
+    </section>
+    
+    
+</body>
+
+</html>

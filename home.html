@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CLEVER</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Link to Font Awesome CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+        body {
+            background-image: url('logo/CLEVER3.png');
+            background-size: cover; /* Adjust as needed */
+            background-position: center; /* Adjust as needed */
+        }
+    </style>
+    <style>
+        /* Define hover effect */
+        .hover-effect:hover {
+          text-shadow: 
+            0 0 10px rgba(255, 94, 0, 0.5), /* Orange shadow */
+            0 0 20px rgba(255, 46, 113, 0.5), /* Pink shadow */
+            0 0 30px rgba(82, 46, 209, 0.5); /* Purple shadow */
+        }
+      </style>
+</head>
+
+<body>
+    <header>
+        <div class="header-left">
+            <style>
+                /* CSS to apply rounded corners to the logo */
+                .logo {
+                    border-radius: 20px; /* Adjust the value to change the roundness */
+                }
+            </style>
+            <a href="home.html">
+                <img src="logo/Untitled design.png" alt="CLEVER" class="logo" style="max-width: 90px;">
+            </a>
+            <h1>CLEVER</h1>
+        </div>
+
+        <nav>
+            <ul>
+                <li><a href="home.html">Home <i class="fas fa-home"></i></a></li>
+                <li><a href="clever.html">Products <i class="fas fa-box-open"></i></a></li>
+                <li><a href="contact.html">Contact <i class="fas fa-envelope"></i></a></li>
+                <li><a href="#" id="cart">Cart (<i class="fas fa-shopping-cart"></i> 0)</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="welcome" style="display: flex; align-items: center;">
+            
+            <div class="text-content" style="flex: 1;">
+                <h2 style="font-size: 100px; color: rgb(255, 255, 255);">
+                    <span class="hover-effect">Welcome</span> 
+                    <span class="hover-effect">to</span> 
+                    <span class="hover-effect">Clever</span>
+                  </h2>
+            
+            </div>
+            <div class="image-slider" style="max-width: 700px; flex: 1;">
+                <div class="slides-container">
+                    <img src="images/_02df0a8e-fc0a-4619-94b9-b3448ce5435d.jpeg" alt="Slide 1">
+                    <img src="images/_258929c8-e609-4faf-8e67-7f15e6c6aaf5.jpeg" alt="Slide 2">
+                    <img src="images/_45b789db-201c-45c3-8952-6990bdd56d63.jpeg" alt="Slide 3">
+                    <img src="images/_f43ae350-9eff-4ccb-952c-ccf8b3fb7908.jpeg" alt="Slide 4">
+                    <img src="images/_94506af7-bb91-4b25-adfe-27b147d80095.jpeg" alt="Slide 5">
+                    <img src="images/_d3e2d324-b184-447c-b2e5-4c52b8616e9b.jpeg" alt="Slide 6">
+                    <img src="images/_6b8f9323-0361-4f91-ae1e-1945d99a82e2.jpeg" alt="Slide 7">
+                    <img src="images/_afdba18d-501b-4e45-be7d-c7c429882a99.jpeg" alt="Slide 8">
+                    <!-- Add more images as needed -->
+                </div>
+                
+            </div>
+        </section>
+        <section id="intro" style="display: flex; align-items: center;">
+        <div>
+            <p>🎉 Welcome to Clever – your ultimate destination for cutting-edge tech accessories that redefine style and functionality! 🚀</p>
+            <p>At Clever, we're on a mission to revolutionize your digital experience, one accessory at a time. 💡 Whether you're a tech enthusiast, a professional on the go, or someone who simply loves staying connected, we've got something special just for you. 💼</p>
+            <p>Indulge in our curated collection of sleek phone cases, designed not only to protect your device but also to make a statement. From minimalist elegance to bold designs, we've got the perfect match for your style. 📱 And why stop there? Dive into our selection of laptop sleeves and bags – crafted with premium materials and innovative features to safeguard your precious gadgets in style. 💼</p>
+            <p>But wait, there's more! Experience the freedom of wireless charging with our state-of-the-art chargers, engineered for speed and convenience. 🔋 And for those long workdays or gaming marathons, our ergonomic peripherals promise comfort and precision, allowing you to stay focused and productive. ⌨️</p>
+            <p>Here at Clever, quality is our top priority. Each product is meticulously crafted and rigorously tested to ensure durability and reliability that you can count on. 🛠️ Plus, with our commitment to customer satisfaction, you can shop with confidence knowing that we've got your back every step of the way. 🛍️</p>
+            <p>But Clever is more than just a brand – it's a community. Join us in celebrating innovation and creativity, as we pave the way for a smarter, more connected world. 🌐 Together, let's embrace the possibilities of technology and unlock new horizons of excitement and discovery. ✨</p>
+            <p>So why settle for ordinary when you can be Clever? Step into the future with us and discover a world where smart solutions meet style and sophistication. 🌟</p>
+            <p>Welcome to Clever – where every accessory tells a story, and every moment is an adventure. 🎈</p>
+        </div>
+        </section>
+
+        <section id="products">
+            <!-- Your product listings -->
+            <h2>Featured Products</h2>
+            <div class="product-carousel">
+                <!-- Product carousel or grid -->
+                <!-- Example: <div class="product-card">Product 1</div> -->
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 CLEVER Store. All rights reserved.</p>
+    </footer>
+
+    <!-- Include the cart modal -->
+    <div id="cartModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Your Cart</h2>
+            <div id="cart-items">
+                <!-- Cart items will be displayed here -->
+            </div>
+            <button id="checkout">Checkout</button>
+        </div>
+    </div>
+
+    <!-- Include JavaScript files at the end of the body -->
+    <script src="cart.js" defer></script>
+    <script src="product.js"></script>
+</body>
+
+</html>

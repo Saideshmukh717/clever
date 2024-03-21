@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CLEVER</title>
+    <link rel="stylesheet" href="styles1.css">
+    <!-- Link to Font Awesome CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    
+    <style>
+        body {
+            background-image: url('headphones/_4c43a8bf-9997-4f3f-b4d2-ec0072df8767.jpeg');
+            background-size: cover; /* Adjust as needed */
+            background-position: center; /* Adjust as needed */
+        }
+    </style>
+    <style>
+        /* Define hover effect */
+        .hover-effect:hover {
+          text-shadow: 
+            0 0 10px rgba(255, 94, 0, 0.5), /* Orange shadow */
+            0 0 20px rgba(255, 46, 113, 0.5), /* Pink shadow */
+            0 0 30px rgba(82, 46, 209, 0.5); /* Purple shadow */
+        }
+      </style>
+</head>
+
+<body>
+    
+    <header>
+        <div class="header-left">
+            <style>
+                /* CSS to apply rounded corners to the logo */
+                .logo {
+                    border-radius: 20px; /* Adjust the value to change the roundness */
+                }
+            </style>
+            <a href="home.html">
+                <img src="logo/Untitled design.png" alt="CLEVER" class="logo" style="max-width: 90px;">
+                
+            </a>
+            <h1>CLEVER</h1>
+        </div>
+
+        <nav>
+            <ul>
+                <li><a href="home.html">home<i class="fas fa-home"></i></a></li>
+                <li><a href="clever.html">Products <i class="fas fa-box-open"></i></a></li>
+                <li><a href="contact.html">Contact <i class="fas fa-envelope"></i></a></li>
+                <li><a href="#" id="cart">Cart (<i class="fas fa-shopping-cart"></i> 0)</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="welcome" style="display: flex; align-items: center;">
+            
+            <div class="text-content" style="flex: 1;">
+                <h2 style="font-size: 100px; color: rgb(255, 255, 255);">
+                    <span class="hover-effect">Headphones</span> 
+                    <span class="hover-effect"></span> 
+                </h2>
+                <div>
+                <button class="add-to-cart" data-name="Headphones" data-price="30" >Add to Cart</button>
+                </div>    
+            </div>
+            <button id="prevButton" class="slideshow-button" aria-label="Previous"><i class="fas fa-chevron-left"></i></button>
+            <div class="image-slider" style="max-width: 700px; flex: 1;">
+                
+                <div class="slides-container">
+                    <img src="headphones/_4c43a8bf-9997-4f3f-b4d2-ec0072df8767.jpeg" alt="Slide 1">
+                    <img src="headphones/_5682cb97-d7d7-4c29-859b-96b4e9081307.jpeg" alt="Slide 2">
+                    <img src="headphones/_81548661-3374-420a-9a50-f6aa3f994789.jpeg" alt="Slide 3">
+                    <img src="headphones/_f92e3726-1e89-45e3-ba5f-9e5bd5c49caa.jpeg" alt="Slide 4">
+                    
+                    <!-- Add more images as needed -->
+                </div>
+                
+                
+            </div>
+            <button id="nextButton" class="slideshow-button" aria-label="Next"><i class="fas fa-chevron-right"></i></button>
+        </section>
+        
+
+        <section id="intro" >
+            <div>
+                <h1>Experience Sound Like Never Before: Clever Headphones</h1>
+                <p>Prepare to be transported to a realm of unparalleled audio excellence with Clever's state-of-the-art headphones – where innovation, comfort, and style converge to redefine your listening experience. 🎧</p>
+                <p>Immerse yourself in a symphony of crystal-clear highs, rich mids, and powerful lows as you discover the true depth and nuance of your favorite music, podcasts, and movies. With advanced audio technology and precision-engineered drivers, Clever headphones deliver studio-quality sound that captivates your senses and elevates every listening session to new heights. 🎶</p>
+                <p>But the magic of Clever headphones extends beyond their extraordinary sound quality – they're also designed with your comfort and convenience in mind. Indulge in hours of uninterrupted listening pleasure with plush ear cushions and an adjustable headband that ensure a perfect fit, while intuitive touch controls and voice-assistant compatibility make managing your music and calls a breeze. 💫</p>
+                <p>Whether you're a music aficionado, a frequent traveler, or a dedicated gamer, Clever headphones are your ultimate companion for every occasion. With wireless connectivity, long-lasting battery life, and superior noise-cancellation technology, you can escape the noise of the world and immerse yourself in your own personal sanctuary of sound. 🔊</p>
+                <p>Step into a world where every beat, every rhythm, and every melody is delivered with unparalleled clarity and precision. Join the ranks of discerning audiophiles who demand nothing but the best, and let Clever headphones be your gateway to a world of sonic perfection. 🌟</p>
+                <p>Experience sound like never before. Choose Clever.</p>
+            </div>
+            
+            
+            
+            
+        </section>
+        <section id="reviews">
+            <h2>Customer Reviews</h2>
+            <div id="review-form">
+                <h3>Write a Review</h3>
+                <form id="reviewForm">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
+                    <label for="rating">Rating:</label>
+                    <input type="number" id="rating" name="rating" min="1" max="5" required>
+                    <label for="comment">Comment:</label>
+                    <textarea id="comment" name="comment" rows="4" required></textarea>
+                    <button type="submit">Submit Review</button>
+                </form>
+            </div>
+        </section>
+        
+    </main>
+
+    
+
+    <!-- Include the cart modal -->
+    <div id="cartModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Your Cart</h2>
+            <div id="cart-items">
+                <!-- Cart items will be displayed here -->
+            </div>
+            <button id="checkout">Checkout</button>
+        </div>
+    </div>
+
+    <!-- Include JavaScript files at the end of the body -->
+    <script src="cart.js" defer></script>
+    <script src="product1.js"></script>
+    <script src="review.js"></script>
+    <section>
+
+        <p style="text-align: center;">&copy; 2024 CLEVER Store. All rights reserved.</p>
+
+        
+    </section>
+    
+    
+</body>
+
+</html>

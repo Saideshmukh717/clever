@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CLEVER</title>
+    <link rel="stylesheet" href="styles1.css">
+    <!-- Link to Font Awesome CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    
+    <style>
+        body {
+            background-image: url('laptop stand/_f85411ac-74e3-445a-addf-32591a1b4a67.jpeg');
+            background-size: cover; /* Adjust as needed */
+            background-position: center; /* Adjust as needed */
+        }
+    </style>
+    <style>
+        /* Define hover effect */
+        .hover-effect:hover {
+          text-shadow: 
+            0 0 10px rgba(255, 94, 0, 0.5), /* Orange shadow */
+            0 0 20px rgba(255, 46, 113, 0.5), /* Pink shadow */
+            0 0 30px rgba(82, 46, 209, 0.5); /* Purple shadow */
+        }
+      </style>
+</head>
+
+<body>
+    
+    <header>
+        <div class="header-left">
+            <style>
+                /* CSS to apply rounded corners to the logo */
+                .logo {
+                    border-radius: 20px; /* Adjust the value to change the roundness */
+                }
+            </style>
+            <a href="home.html">
+                <img src="logo/Untitled design.png" alt="CLEVER" class="logo" style="max-width: 90px;">
+                
+            </a>
+            <h1>CLEVER</h1>
+        </div>
+
+        <nav>
+            <ul>
+                <li><a href="home.html">home<i class="fas fa-home"></i></a></li>
+                <li><a href="clever.html">Products <i class="fas fa-box-open"></i></a></li>
+                <li><a href="contact.html">Contact <i class="fas fa-envelope"></i></a></li>
+                <li><a href="#" id="cart">Cart (<i class="fas fa-shopping-cart"></i> 0)</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="welcome" style="display: flex; align-items: center;">
+            
+            <div class="text-content" style="flex: 1;">
+                <h2 style="font-size: 100px; color: rgb(255, 255, 255);">
+                    <span class="hover-effect">Laptop</span> 
+                    <span class="hover-effect">Stand</span> 
+                </h2>
+                <div>
+                <button class="add-to-cart" data-name="Laptop Stand" data-price="25" >Add to Cart</button>
+                </div>    
+            </div>
+            <button id="prevButton" class="slideshow-button" aria-label="Previous"><i class="fas fa-chevron-left"></i></button>
+            <div class="image-slider" style="max-width: 700px; flex: 1;">
+                
+                <div class="slides-container">
+                    <img src="laptop stand/_1793de92-bb72-49f2-9d5d-ac75be19efe7.jpeg" alt="Slide 1">
+                    <img src="laptop stand/_2b829997-88a2-4179-9d99-b55f25657060.jpeg" alt="Slide 2">
+                    <img src="laptop stand/_83738d10-bb21-4c06-aaf2-16a3d928736a.jpeg" alt="Slide 3">
+                    <img src="laptop stand/_ce33f0a2-7af6-4b48-842e-15d3836b9688.jpeg" alt="Slide 4">
+                    
+                    <!-- Add more images as needed -->
+                </div>
+                
+                
+            </div>
+            <button id="nextButton" class="slideshow-button" aria-label="Next"><i class="fas fa-chevron-right"></i></button>
+        </section>
+        
+
+        <section id="intro" >
+            <div>
+                <h1>Elevate Your Workstation: Clever Laptop Stands</h1>
+                <p>Transform your workspace into a sanctuary of productivity and elegance with Clever's revolutionary laptop stands – the epitome of ergonomic design, style, and innovation. 💻</p>
+                <p>Experience the perfect blend of form and function as you elevate your laptop to new heights with our meticulously engineered stands. Crafted from premium materials such as aerospace-grade aluminum and sustainable bamboo, each stand not only complements your device's sleek aesthetics but also provides unrivaled stability and support. 🌿</p>
+                <p>But the true magic of Clever laptop stands lies in their innovative features and thoughtful design elements. Say goodbye to neck strain and discomfort with adjustable height and angle settings that empower you to find the perfect ergonomic position for maximum comfort and productivity. 🚀</p>
+                <p>Imagine seamlessly transitioning between tasks with the swiftness and precision of a master conductor, thanks to our stands' integrated cable management solutions and versatile docking options. From conference calls to creative brainstorming sessions, Clever laptop stands are the indispensable tool that empowers you to conquer every challenge with grace and ease. 🎶</p>
+                <p>Embrace a world where style meets substance, where functionality meets finesse, and where every moment at your workstation is infused with inspiration and vitality. Join the ranks of visionary thinkers and creative trailblazers who recognize that greatness begins with the tools you choose. 🌟</p>
+                <p>So why settle for an ordinary workstation when you can elevate it to extraordinary heights with Clever laptop stands? Experience the pinnacle of innovation and sophistication today, and redefine what it means to work in style. 💼</p>
+                <p>Elevate your workstation. Choose Clever.</p>
+            </div>
+            
+            
+        </section>
+        <section id="reviews">
+            <h2>Customer Reviews</h2>
+            <div id="review-form">
+                <h3>Write a Review</h3>
+                <form id="reviewForm">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
+                    <label for="rating">Rating:</label>
+                    <input type="number" id="rating" name="rating" min="1" max="5" required>
+                    <label for="comment">Comment:</label>
+                    <textarea id="comment" name="comment" rows="4" required></textarea>
+                    <button type="submit">Submit Review</button>
+                </form>
+            </div>
+        </section>
+        
+    </main>
+
+    
+
+    <!-- Include the cart modal -->
+    <div id="cartModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Your Cart</h2>
+            <div id="cart-items">
+                <!-- Cart items will be displayed here -->
+            </div>
+            <button id="checkout">Checkout</button>
+        </div>
+    </div>
+
+    <!-- Include JavaScript files at the end of the body -->
+    <script src="cart.js" defer></script>
+    <script src="product1.js"></script>
+    <script src="review.js"></script>
+    <section>
+
+        <p style="text-align: center;">&copy; 2024 CLEVER Store. All rights reserved.</p>
+
+        
+    </section>
+    
+    
+</body>
+
+</html>
